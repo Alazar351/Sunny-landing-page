@@ -125,3 +125,55 @@ nav li:nth-child(4):hover {
 .feature .overlay p {
   margin-top: 40px;
 }
+
+.review {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 120dvh;
+}
+
+.review h3 {
+  font-size: 3rem;
+  font-family: Fraunces;
+  text-transform: uppercase;
+  color: hsl(210, 4%, 67%);
+  margin-bottom: 6rem;
+  letter-spacing: 0.75rem;
+}
+
+.review .clients {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 4rem;
+  margin: 0px 4rem;
+  text-align: center;
+}
+
+.review .clients .client {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.review .client img {
+  border-radius: 50%;
+}
+.review .client .description {
+  font-size: 2rem;
+  margin: 4rem 0px;
+}
+
+.review .credit .author {
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 4rem;
+  font-family: Fraunces;
+}
+
+.review .credit .job {
+  font-size: 1.5rem;
+  font-family: Barlow;
+  color: hsl(210, 4%, 67%);
+}
