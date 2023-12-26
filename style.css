@@ -131,7 +131,7 @@ nav li:nth-child(4):hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 120dvh;
+  height: 140dvh;
 }
 
 .review h3 {
@@ -176,4 +176,58 @@ nav li:nth-child(4):hover {
   font-size: 1.5rem;
   font-family: Barlow;
   color: hsl(210, 4%, 67%);
+}
+
+.footer .gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.footer .gallery img {
+  max-width: 100%;
+}
+
+.footer .links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: hsla(168, 42%, 56%, 0.678);
+  height: 32rem;
+}
+
+.footer .logo {
+  width: 100%;
+  height: 3rem;
+}
+
+.footer .links .link {
+  display: flex;
+  justify-content: space-between;
+  width: 30rem;
+  font-size: 1.5rem;
+  color: #2c7566;
+  font-weight: bold;
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+}
+
+.footer .links .social {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 17rem;
+  height: 5rem;
+  fill: #2c7566;
+}
+
+.footer .links .social svg {
+  width: 50%;
+  height: 30%;
+}
+
+.footer a:hover,
+.footer .social svg:hover {
+  color: white;
+  fill: white;
+  cursor: pointer;
 }
