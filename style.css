@@ -4,8 +4,9 @@
   box-sizing: border-box;
 }
 
-nav div img {
+nav .logo {
   width: 140px;
+  padding: 15px 0px;
 }
 nav {
   position: absolute;
@@ -15,6 +16,7 @@ nav {
   width: 100%;
   padding: 0px 40px;
   margin-top: 20px;
+  z-index: 1;
 }
 
 nav ul {
@@ -43,13 +45,87 @@ nav li:nth-child(4):hover {
   color: white;
 }
 
+nav .prime-btn {
+  display: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 95px;
+  width: 87%;
+  height: 700px;
+  margin-left: 7.5%;
+  z-index: 1;
+}
+.triangle {
+  position: absolute;
+  top: -25px;
+  right: 0;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 0 0 25px 25px;
+  border-color: transparent transparent #fff transparent;
+  transform: rotate(0deg);
+  z-index: 1;
+}
+
+.menu {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.menu ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 100%;
+}
+
+.menu li {
+  font-size: 1.75rem;
+  list-style-type: none;
+  padding: 15px;
+  border-radius: 25px;
+  color: hsl(200, 4%, 58%);
+  font-weight: bold;
+}
+.menu li a {
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.menu li:nth-child(4) {
+  background: hsl(51, 100%, 49%);
+  color: black;
+  font-family: Fraunces;
+  text-transform: uppercase;
+}
+.menu li:nth-child(4):hover {
+  background-color: black;
+  color: white;
+}
+
 .hero {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-image: url("./images/desktop/image-header.jpg");
-  background-size: cover;
+  position: relative;
+  height: 100dvh;
+}
+
+.hero .header {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 .hero div {
@@ -57,17 +133,17 @@ nav li:nth-child(4):hover {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  margin-top: -100px;
+  margin-top: -50px;
   height: 400px;
 }
 
 .hero h1 {
-  font-size: 120px;
+  font-size: clamp(1.5rem, 9vw, 10rem);
   color: white;
 }
 
 .hero img {
-  height: 150px;
+  height: 10rem;
 }
 
 .feature {
@@ -87,21 +163,22 @@ nav li:nth-child(4):hover {
 }
 .feature .pictureless .wrapper {
   width: 78%;
-  font-size: 2rem;
 }
 .feature .pictureless h2 {
-  font-size: 5rem;
+  font-size: clamp(40px, 3.6vw, 88px);
 }
 .feature .pictureless p {
   margin: 40px 0px;
+  font-size: clamp(16px, 1.65vw, 36px);
 }
 .feature .pictureless a {
   display: inline-block;
   text-transform: uppercase;
-  font-size: 25px;
+  font-size: clamp(18px, 1.3vw, 28px);
   font-family: Fraunces;
   cursor: pointer;
 }
+
 .feature .pictureless .wrapper .line {
   position: relative;
   top: -10px;
@@ -129,6 +206,7 @@ nav li:nth-child(4):hover {
 .feature .picture {
   position: relative;
 }
+
 .feature .overlay {
   display: flex;
   justify-content: center;
@@ -138,17 +216,20 @@ nav li:nth-child(4):hover {
   left: 50%;
   bottom: 5%;
   transform: translate(-50%, -5%);
-  font-size: 1.75rem;
   text-align: center;
   width: 58%;
+  min-width: 220px;
+  max-height: 200px;
 }
 
 .feature .overlay h2 {
   font-family: Fraunces;
+  font-size: clamp(24px, 3vw, 40px);
 }
 
 .feature .overlay p {
   margin-top: 40px;
+  font-size: clamp(16px, 2vw, 28px);
 }
 
 .feature .overlay .graphic {
@@ -158,21 +239,23 @@ nav li:nth-child(4):hover {
 .feature .overlay .photo {
   color: hsl(198, 62%, 26%);
 }
+
 .review {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 140dvh;
+  min-height: 140dvh;
 }
 
 .review h3 {
-  font-size: 3rem;
+  font-size: clamp(11px, 4vw, 44px);
   font-family: Fraunces;
   text-transform: uppercase;
   color: hsl(210, 4%, 67%);
   margin-bottom: 6rem;
   letter-spacing: 0.75rem;
+  text-align: center;
 }
 
 .review .clients {
@@ -180,7 +263,6 @@ nav li:nth-child(4):hover {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 4rem;
   margin: 0px 4rem;
-  text-align: center;
 }
 
 .review .clients .client {
@@ -209,7 +291,9 @@ nav li:nth-child(4):hover {
   font-family: Barlow;
   color: hsl(210, 4%, 67%);
 }
-
+.footer {
+  max-width: 100%;
+}
 .footer .gallery {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -236,6 +320,7 @@ nav li:nth-child(4):hover {
   display: flex;
   justify-content: space-between;
   width: 30rem;
+  max-width: 100%;
   font-size: 1.5rem;
   color: #2c7566;
   font-weight: bold;
@@ -262,4 +347,36 @@ nav li:nth-child(4):hover {
   color: white;
   fill: white;
   cursor: pointer;
+}
+@media (max-width: 768px) {
+  nav .prime-btn {
+    display: block;
+  }
+  nav ul {
+    display: none;
+  }
+  .open {
+    display: block;
+  }
+  .feature {
+    grid-template-columns: 1fr;
+  }
+  .grid-row-start {
+    grid-row-start: 1;
+  }
+  .feature .pictureless {
+    height: 100%;
+  }
+  .feature .pictureless h2 {
+    font-size: 3rem;
+  }
+  .feature .pictureless p {
+    font-size: 1.5rem;
+  }
+  .review .clients {
+    grid-template-columns: 1fr;
+  }
+  .footer .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
 }
