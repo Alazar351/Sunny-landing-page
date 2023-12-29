@@ -24,7 +24,10 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/responsive-landing-page-flexboxandgrid-lq5v2h54bu
+
+)
+
 - Live Site URL: [Sunshine Landing Page](https://superlative-sunshine-af8e3f.netlify.app/)
 
 ## My process
